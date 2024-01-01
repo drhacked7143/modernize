@@ -7,14 +7,17 @@
     <mat-selection-list [multiple]="false">
       <mat-list-option *ngFor="let item of contacts" (click)="selectContact(item)">
         <img [src]="item.avatar" matListItemAvatar>
-        <p mat-line class="chat-title">
-          <span class="chat-name">
-            {{item.fullName}}
-          </span>
-          <span class="chat-date">
-            {{item?.lastOnline}}
-          </span>
-        </p>
+        <div class="chat-info">
+          <p mat-line class="chat-title">
+            <span class="chat-name">
+              {{item.fullName}}
+            </span>
+            <span class="chat-date">
+              {{item?.lastOnline}}
+            </span>
+          </p>
+        </div>
+
         <p mat-line>
           <ng-container *ngFor="let item of item?.messages;let last =last">
             <ng-container *ngIf="last">

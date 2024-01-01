@@ -93,10 +93,6 @@
   flex-direction: column;
 }
 
-// .chat-area > :first-child{
-//   margin-top: auto;
-// }
-
 .input-area {
   display: flex;
   align-items: center;
@@ -163,4 +159,36 @@
   right: 8px;
   font-size: 0.7rem;
   color: pink;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .chat-list, .messages {
+    width: 100%;
+    margin: 16px 0;
+  }
+
+  .messages {
+    padding: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .chat-bubble {
+    padding-right: 16px; /* Adjust as needed for smaller screens */
+  }
+
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-area input {
+    margin-bottom: 8px;
+  }
 }
